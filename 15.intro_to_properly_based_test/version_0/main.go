@@ -79,7 +79,8 @@ func parseRomanNumber(roman *string) string {
 func ConvertToArabic(roman string) int {
 	initRomanNumbers()
 	arabic := 0
-	for {
+	n := len(roman)
+	for i := 0; i < n; i++ {
 		tempRomanNumber := parseRomanNumber(&roman)
 		arabic += romanNumbers[tempRomanNumber]
 		if roman == "" {
